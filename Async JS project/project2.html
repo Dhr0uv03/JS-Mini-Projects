@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dhruv Vadher</h1>
+    <button id ="stop"> STOP </button>
+    <button id ="start"> START </button>
+    <h3 id = "show"></h3>
+
+</body>
+<script>
+
+   document.querySelector('#start').addEventListener('click',function(){
+    const sayDate = function(str){
+        console.log(str,Date.now());
+        document.querySelector('#show').innerHTML = (str)
+        }
+            let intervalId = setInterval(sayDate,1500)
+
+            document.querySelector('#stop').addEventListener('click',function(){
+          
+              clearInterval(intervalId)
+
+            })
+   })
+
+
+
+</script>
+</html>
